@@ -1,7 +1,7 @@
 <template>
   <div id="app" >
     <div id="nav" class="px-3">
-      <router-link to="/">天興書局</router-link> 
+      <router-link to="/">天</router-link> 
     </div>
     <div class="outer">
       <div class="inner">
