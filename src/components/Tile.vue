@@ -1,7 +1,7 @@
 <template>
     <div class="tile" :style="styling">
-        123
-        {{this.color.c}}
+        123 {{ (this.color==undefined)?"r":this.color.c}}
+        {{d}}
     </div>
 </template>
 
@@ -15,13 +15,25 @@ export default {
             type:Object
         }
     },
+    created(){
+        window.addEventListener('resize',this.onResize)
+    },
     computed:{
         styling(){
             return {
                 height:this.height,
                
-                padding:this.padding
             }
+        }
+    },
+    methods:{
+        onResize(){
+            this.d=window.innerWidth;
+        }
+    },
+    data(){
+        return {
+            d:window.innerWidth
         }
     }
 }
