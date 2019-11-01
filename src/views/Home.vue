@@ -1,17 +1,19 @@
 <template>
   <div class="container-fluid">
+    <div class="row">
+    </div>
       <div class="row ">
         
         <div class="col-lg-9 p-3 col-md-9 p-0" >
-          <Tile/>
+          <Tile  height=300 color="red" />
           <div class="row m-0">
             <div class="col-6 p-3">
 
-              <Tile/>
+              <Tile height="200" color="green"/>
             </div>
             <div class="col-6 p-3">
 
-              <Tile/>
+              <Tile height="150" padding="30px"/>
             </div>
           </div>
         </div>

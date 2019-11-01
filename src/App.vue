@@ -5,6 +5,7 @@
     </div>
     <div class="outer">
       <div class="inner">
+        <router-view/>
       </div>
     </div>
   </div>
