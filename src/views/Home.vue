@@ -5,15 +5,15 @@
       <div class="row ">
         
         <div class="col-lg-9 p-3 col-md-9 p-0" >
-          <Tile  height=300 color="red" />
+          <Tile  height=30vw :color='firstTileColor' />
           <div class="row m-0">
             <div class="col-6 p-3">
 
-              <Tile height="200" color="green"/>
+              <Tile height=200px />
             </div>
             <div class="col-6 p-3">
 
-              <Tile height="150" padding="30px"/>
+              <Tile height=150px padding=30px />
             </div>
           </div>
         </div>
@@ -29,6 +29,13 @@ export default {
   name: 'home',
   components: {
     Tile
+  },
+  data(){
+    return{
+      firstTileColor:{
+        c:'red'
+      }
+    }
   }
 }
 </script>

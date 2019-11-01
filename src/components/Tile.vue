@@ -1,22 +1,25 @@
 <template>
     <div class="tile" :style="styling">
         123
+        {{this.color.c}}
     </div>
 </template>
 
 <script>
 export default {
-    props:[
-        "padding",
-        "margin",
-        "height",
-        "color"
-    ],
+    props:{
+        padding:String,
+        margin:String,
+        height:String,
+        color:{
+            type:Object
+        }
+    },
     computed:{
         styling(){
             return {
-                height:this.height+"px",
-                backgroundColor:this.color,
+                height:this.height,
+               
                 padding:this.padding
             }
         }
