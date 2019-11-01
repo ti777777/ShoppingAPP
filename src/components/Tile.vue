@@ -1,19 +1,32 @@
 <template>
-    <div class="tile">
+    <div class="tile" :style="styling">
         123
     </div>
 </template>
 
 <script>
 export default {
-    
+    props:[
+        "padding",
+        "margin",
+        "height",
+        "color"
+    ],
+    computed:{
+        styling(){
+            return {
+                height:this.height+"px",
+                backgroundColor:this.color,
+                padding:this.padding
+            }
+        }
+    }
 }
 </script>
 
 <style scoped>
 .tile{
     width:100%;
-    height:300px;
     position:relative;
     background-color: #fff;
     border:1px solid;
