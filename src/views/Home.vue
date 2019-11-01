@@ -13,7 +13,7 @@
             </div>
             <div class="col-6 p-3">
 
-              <Tile height=150px padding=30px />
+              <Tile height=130px padding=30px />
             </div>
           </div>
         </div>
