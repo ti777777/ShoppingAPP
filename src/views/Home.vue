@@ -1,40 +1,39 @@
 <template>
   <div class="container-fluid">
     <div class="row">
-    </div>
-      <div class="row ">
-        
-        <div class="col-lg-9 p-3 col-md-9 p-0" >
-          <Tile  height=30vw :color='firstTileColor' />
-          <div class="row m-0">
-            <div class="col-6 p-3">
-
-              <Tile height=200px />
-            </div>
-            <div class="col-6 p-3">
-
-              <Tile height=130px padding=30px />
-            </div>
-          </div>
-        </div>
+      <div class="col-12 p-3" >
+        123
       </div>
+        
       
+    </div>
   </div>
+      
 </template>
 
 <script>
-import Tile from '../components/Tile'
 // @ is an alias to /src
 export default {
   name: 'home',
   components: {
-    Tile
+    
   },
   data(){
     return{
       firstTileColor:{
         c:'red'
-      }
+      },
+      bp:{
+      },
+      content:""
+    }
+  },
+  created(){
+    window.addEventListener('resize',this.onResize);
+  },
+  methods:{
+    onResize(){
+      this.content=window.innerWidth;
     }
   }
 }
