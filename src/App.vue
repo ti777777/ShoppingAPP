@@ -8,7 +8,7 @@
     <div class="center">
       <div class="aside">
         <div class="p-1 border" v-if="this.$router.currentRoute.name=='test'">
-          125
+          1
         </div>
         <div class="p-1 border" v-else >
           12
