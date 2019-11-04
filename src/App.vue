@@ -7,7 +7,12 @@
     </div>
     <div class="center">
       <div class="aside">
-        123456
+        <div class="p-1 border" v-if="this.$router.currentRoute.name=='test'">
+          125
+        </div>
+        <div class="p-1 border" v-else >
+          12
+        </div>
       </div>
       <div class="main">
         <router-view/>
