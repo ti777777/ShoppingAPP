@@ -1,5 +1,8 @@
 <template>
     <div>
+        <slot/>
+        <slot/>
+        {{this.a}}
     </div>    
 </template>
 <script>
@@ -10,6 +13,9 @@ export default {
         return {
             a:""
         }
+    },
+    mounted(){
+        this.a=this.$el.innerText;
     }
 }
 </script>

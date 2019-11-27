@@ -6,12 +6,19 @@
       </div>
     </div>
     <div class="center">
-      <div class="aside">
-        <div class="p-1 border" v-if="this.$router.currentRoute.name=='test'">
+      <div class="aside bg-light">
+        <div v-if="this.$router.currentRoute.name=='test'">
           1
         </div>
-        <div class="p-1 border" v-else >
-          12
+        <div v-else >
+          <AsideMenu title="123"/>
+          <AsideMenu title="123"/>
+          <AsideMenu title="123"/>
+          
+            <AsideBanner/>
+            <AsideBanner/>
+            <AsideBanner/>
+            <AsideBanner/>
         </div>
       </div>
       <div class="main">
@@ -22,9 +29,13 @@
 </template>
 
 <script>
-
+import AsideMenu from './components/Aside/AsideMenu'
+import AsideBanner from './components/Aside/AsideBanner'
 export default {
-
+  components:{
+    AsideMenu,
+    AsideBanner
+  }
 }
 
 </script>
@@ -32,7 +43,7 @@ export default {
 <style>
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Microsoft JhengHei','Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -67,15 +78,33 @@ a{
 }
 .aside{
   width:180px;
-  background-color: pink;
   float:left;
 }
 .main{
   width:1110px;
-  background-color: lightblue;
   float:right;
 }
-
+.t-button {
+	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	background-color:#ededed;
+	border-radius:15px;
+	border:1px solid #d6bcd6;
+	display:inline-block;
+	cursor:pointer;
+	color:#1f3785;
+	font-size:17px;
+	padding:3px 20px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
+}
+.t-button:hover {
+	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+	background-color:#bab1ba;
+}
+.t-button:active {
+	position:relative;
+	top:1px;
+}
 
 @media (max-width:1339px) {
     .center{
@@ -125,10 +154,16 @@ a{
       display: none;
     }
     .center{
-      width:calc(100% - 40px);
+      width:calc(100% - 20px);
     }
     .main{
       width:100%;
+    }
+    #search-input{
+      width:calc(100% - 80px);
+    }
+    #search-button{
+      width:80px;
     }
 }
 @media (max-width: 600px){
