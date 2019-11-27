@@ -31,4 +31,13 @@ ul{
 li{
     float: left;
 }
+
+@media (max-width: 768px){
+    #search-input{
+      width:calc(100% - 100px);
+    }
+    #search-button{
+      width:100px;
+    }
+}
 </style>

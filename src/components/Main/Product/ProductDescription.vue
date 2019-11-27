@@ -2,9 +2,8 @@
     <div class="row">
         <div class="col-12 p-3" style="border:1px solid #222;">
             <div style="display:inline-block;">
-                <img src="https://via.placeholder.com/220x300.png">
             </div>
-            <div class="p-3" style="display:inline-block; vertical-align:top;height:450px;">
+            <div class="p-3" style="display:inline-block; vertical-align:top;">
             </div>
         </div>
     </div>    

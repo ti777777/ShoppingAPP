@@ -159,12 +159,6 @@ a{
     .main{
       width:100%;
     }
-    #search-input{
-      width:calc(100% - 80px);
-    }
-    #search-button{
-      width:80px;
-    }
 }
 @media (max-width: 600px){
 }
