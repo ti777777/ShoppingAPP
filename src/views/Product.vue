@@ -4,6 +4,7 @@
             <div class="col-12 text-left" >
                 <SearchBar/>
                 <ProductDetail/>
+                
             </div>
         </div>
     </div>
