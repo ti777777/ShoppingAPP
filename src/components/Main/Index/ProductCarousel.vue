@@ -4,15 +4,15 @@
             {{carouselInfo.title}}
         </div>
         <carousel :nav="false" :dots="false" :responsive="this.responsive" >
-            
-                <ProductItem title="123123"/>
-                <ProductItem title="123123"/>
-                <ProductItem title="123123"/>
-                <ProductItem title="123123"/>
-                <ProductItem title="123123"/>
-                <ProductItem title="123123"/>
-                <ProductItem title="123123"/>
-                <ProductItem title="123123"/>
+           <ProductItem/>
+           <ProductItem/>
+           <ProductItem/>
+           <ProductItem/>
+           <ProductItem/>
+           <ProductItem/>
+           <ProductItem/>
+           <ProductItem/>
+            <!--<ProductItem v-for="item in items" :key="item" v-bind:item="item"  />-->
             <template v-slot:prev><span class="prev" style="position:absolute; bottom:calc(50% - 30px); left:0; z-index:2; background:white; border:1px solid;">prev</span></template>
             <template v-slot:next><span class="next" style="position:absolute; bottom:calc(50% - 30px); right:0; z-index:2; background:white; border:1px solid;">next</span></template>
         </carousel>
@@ -24,19 +24,33 @@ import carousel from 'vue-owl-carousel'
 import ProductItem from './ProductCarouselItem'
 
 export default {
-    components: { carousel ,ProductItem },
+    components: { carousel,ProductItem  },
     props:[
         "carouselInfo"
     ],
     data(){
         return{
-            title:"產品",
-            responsive:{0:{items:2},480:{items:3},880:{items:4},1024:{items:5}}
+            responsive:{
+                0:{items:2},
+                480:{items:3},
+                880:{items:4},
+                1024:{items:5}
+            },
+            items:[]
         }
     },
-    mounted(){
+    created(){
+        var oReq = new XMLHttpRequest();
+        oReq.addEventListener("load", ()=>{
+            var res=JSON.parse(oReq.responseText);
+            this.items=this.items.concat(...res.data);
+        });
+        oReq.open("GET", this.carouselInfo.requestUrl);
+        //oReq.open("GET", "https://reqres.in/api/users?page=2");
         
+        oReq.send();
     }
+
 }
 </script>
 

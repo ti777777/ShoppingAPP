@@ -20,10 +20,12 @@ export default {
         return {
             carousels:{
                 trettaCarousel:{
-                    title:"寶可夢tretta"
+                    title:"寶可夢tretta",
+                    requestUrl:"/api/1/tretta?order=desc&max=10"
                 },
                 zhTwBook:{
-                    title:"中文書"
+                    title:"中文書",
+                    requestUrl:"/api/1/zhTwBook?order=desc&max=10"
                 }
             }
         }

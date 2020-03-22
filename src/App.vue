@@ -18,6 +18,9 @@
           <AsideBanner/>
           <AsideBanner/>
         </div>
+        <div>
+          <router-link to="/about">關於</router-link> 
+        </div>
       </div>
       <div class="main">
         <router-view/>
