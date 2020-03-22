@@ -2,7 +2,7 @@
   <div id="app" >
     <div id="nav" class="px-3">
       <div class="center">
-        <router-link to="/">天</router-link> 
+        <router-link to="/">菜頭雜貨舖</router-link> 
       </div>
     </div>
     <div class="center">
@@ -11,14 +11,12 @@
           1
         </div>
         <div v-else >
-          <AsideMenu title="123"/>
-          <AsideMenu title="123"/>
-          <AsideMenu title="123"/>
-          
-            <AsideBanner/>
-            <AsideBanner/>
-            <AsideBanner/>
-            <AsideBanner/>
+          <AsideMenu title="近期" v-bind:menu="recentlyMenu"/>
+          <AsideMenu title="類別" v-bind:menu="categoryMenu"/>
+          <AsideBanner/>
+          <AsideBanner/>
+          <AsideBanner/>
+          <AsideBanner/>
         </div>
       </div>
       <div class="main">
@@ -35,6 +33,39 @@ export default {
   components:{
     AsideMenu,
     AsideBanner
+  },
+  data(){
+    return {
+      recentlyMenu:[
+        {
+          title:'tretta'
+        },
+        {
+          title:'二手書'
+        }
+      ],
+      categoryMenu:[
+        
+        {
+          title:'中文書'
+        },
+        {
+          title:'英文書'
+        },
+        {
+          title:'tretta'
+        },
+        {
+          title:'其他'
+        }
+        ,
+        {
+          title:'網頁客製化'
+        }
+      ]
+      
+
+    }
   }
 }
 
