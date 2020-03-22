@@ -1,9 +1,9 @@
 <template>
     <div class="">
         <Banner/>
-        <ProductCarousel/>
+        <ProductCarousel v-bind:carouselInfo="this.carousels.trettaCarousel"/>
         <Banner/>
-        <ProductCarousel/>
+        <ProductCarousel v-bind:carouselInfo="this.carousels.zhTwBook"/>
     </div>
 </template>
 <script>
@@ -15,6 +15,18 @@ export default {
     components:{
         Banner,
         ProductCarousel
+    },
+    data(){
+        return {
+            carousels:{
+                trettaCarousel:{
+                    title:"寶可夢tretta"
+                },
+                zhTwBook:{
+                    title:"中文書"
+                }
+            }
+        }
     }
 }
 </script>

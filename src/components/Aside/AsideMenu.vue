@@ -4,11 +4,10 @@
             {{this.title}}
         </div>
         <div class="menu-body">
-            <ul>
-                <li>1</li>
-                <li>1</li>
-                <li>1</li>
-                <li>1</li>
+            <ul class="menu-list p-2"> 
+                <li class="menu-item p-1" v-for="item in menu" :key="item">
+                    <a href="#">{{ item.title }}</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -17,7 +16,8 @@
 <script>
 export default {
     props:[
-        "title"
+        "title",
+        "menu"
     ]
 }
 </script>
@@ -30,6 +30,17 @@ export default {
     .menu-title{
         background-color:#888; 
         border-radius: 3px;
+    }
+    .menu-list{
+        list-style: none;
+        
+    }
+    .menu-item{
+        text-align: left;
+    }
+    .menu-item a{
+        text-decoration: underline;
+        color:black;
     }
     .box-shadow{
         box-shadow: 0px 2px 5px #999;

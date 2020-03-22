@@ -1,7 +1,7 @@
 <template>
     <div class="mt-2 p-2 box-shadow bg-light" style="position:relative;">
         <div class="carousel-title p-2 mb-2">
-            {{this.title}}
+            {{carouselInfo.title}}
         </div>
         <carousel :nav="false" :dots="false" :responsive="this.responsive" >
             
@@ -25,11 +25,17 @@ import ProductItem from './ProductCarouselItem'
 
 export default {
     components: { carousel ,ProductItem },
+    props:[
+        "carouselInfo"
+    ],
     data(){
         return{
             title:"產品",
             responsive:{0:{items:2},480:{items:3},880:{items:4},1024:{items:5}}
         }
+    },
+    mounted(){
+        
     }
 }
 </script>
