@@ -1,32 +1,29 @@
 <template>
     <div class="ProductItem">
-        
-        <div>
-            <img :src=this.img alt="">
-        </div>
-        <div style="height:50px;">
-            <a :href=this.url >{{this.title}}</a>
-            <span>{{this.price}}</span>
-        </div>
+        <img src="https://placeimg.com/200/200/any?1" alt="">
+        <!--
+        <a href="#">
+            <img :src=this.item.img alt="">
+            {{this.item.title}}<br>
+            {{this.item.price}}
+        </a>
+        -->
     </div>
 </template>
 
 <script>
 export default {
     props:[
-        "title",
-        "price",
-        "url",
-        "img"
-    ]
+        //"item"
+    ],
+    created(){
+    }
 }
 </script>
 
 <style scoped>
-.ProductItem div{
-    margin:0 auto;
-}
 img{
+    border: 1px solid blue;
     object-fit: scale-down;
     height:200px;
 }
