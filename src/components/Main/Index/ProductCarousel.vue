@@ -46,7 +46,6 @@ export default {
             this.items=this.items.concat(...res.data);
         });
         oReq.open("GET", this.carouselInfo.requestUrl);
-        //oReq.open("GET", "https://reqres.in/api/users?page=2");
         
         oReq.send();
     }
@@ -56,7 +55,7 @@ export default {
 
 <style scoped>
     .carousel-title{
-        background-color: #999;
+        background-color: rgb(224, 176, 42);
     }
     .item{
         border:1px solid;

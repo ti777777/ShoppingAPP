@@ -28,7 +28,7 @@ export default {
         border-radius:3px; 
     }
     .menu-title{
-        background-color:#888; 
+        background-color:rgb(241, 184, 97); 
         border-radius: 3px;
     }
     .menu-list{
