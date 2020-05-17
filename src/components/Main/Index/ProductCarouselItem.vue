@@ -23,7 +23,6 @@ export default {
 
 <style scoped>
 img{
-    border: 1px solid blue;
     object-fit: scale-down;
     height:200px;
 }

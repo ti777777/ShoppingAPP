@@ -2,7 +2,7 @@
   <div id="app" >
     <div id="nav" class="px-3">
       <div class="center">
-        <router-link to="/">菜頭雜貨舖</router-link> 
+        <router-link to="/">就是愛動漫</router-link> 
       </div>
     </div>
     <div class="center">
@@ -11,7 +11,7 @@
           1
         </div>
         <div v-else >
-          <AsideMenu title="近期" v-bind:menu="recentlyMenu"/>
+          <AsideMenu title="近期" v-bind:menu="recentMenu"/>
           <AsideMenu title="類別" v-bind:menu="categoryMenu"/>
           <AsideBanner/>
           <AsideBanner/>
@@ -39,7 +39,7 @@ export default {
   },
   data(){
     return {
-      recentlyMenu:[
+      recentMenu:[
         {
           title:'tretta'
         },
@@ -48,22 +48,71 @@ export default {
         }
       ],
       categoryMenu:[
-        
         {
-          title:'中文書'
+          title:'抱枕'
         },
         {
-          title:'英文書'
+          title:'3C用品類'
         },
         {
-          title:'tretta'
+          title:'DVD'
         },
         {
-          title:'其他'
-        }
-        ,
+          title:'公仔類'
+        },
         {
-          title:'網頁客製化'
+          title:'文具類'
+        },
+        {
+          title:'包袋類'
+        },
+        {
+          title:'卡夾類'
+        },
+        {
+          title:'生活用品類'
+        },
+        {
+          title:'服飾類'
+        },
+        {
+          title:'杯類'
+        },
+        {
+          title:'拼圖類'
+        },
+        {
+          title:'家飾品類'
+        },
+        {
+          title:'海報掛畫收藏'
+        },
+        {
+          title:'配件飾品類'
+        },
+        {
+          title:'絨毛類'
+        },
+        {
+          title:'絕版品'
+        },
+        {
+          title:'資料夾類'
+        },
+        {
+          title:'電影展覽票券'
+        },
+        {
+          title:'電器類'
+        },
+        {
+          title:'電影展覽票券'
+        },
+        {
+          title:'福袋禮包類'
+        },
+        {
+          title:'廚房用品類'
         }
       ]
       
@@ -88,7 +137,7 @@ export default {
 
 #nav{
   text-align: left;
-  background-color:#222;
+  background-color:rgb(235, 191, 72);
   height:40px;
   line-height: 40px;
 }
@@ -99,7 +148,7 @@ a{
 
 #nav a {
   font-weight: bold;
-  color: #eee;
+  color: #222;
   
 }
 
