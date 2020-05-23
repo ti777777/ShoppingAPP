@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-2">
+    <div class="my-2">
         <img src="https://via.placeholder.com/420x100.png"/>
     </div>    
 </template>

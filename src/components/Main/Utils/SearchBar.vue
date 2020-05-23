@@ -1,10 +1,10 @@
 <template>
-    <div class="row">
-        <div class="col-12 pt-3">
+    <div>
+        <div class="p-2 text-left">
             <input id="search-input" type="text" name="" >
             <button id="search-button" class="t-button"><i class="fa fa-search"></i>搜尋</button>
         </div>
-        <div class="col-12 m-0">
+        <div class="">
             <ul>
                 <li><a href="#">123</a></li>
                 <li><a href="#">123</a></li>
