@@ -1,12 +1,8 @@
 <template>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 text-left" >
-                <SearchBar/>
-                <ProductDetail/>
+    <div >
+        <SearchBar/>
+        <ProductDetail/>
                 
-            </div>
-        </div>
     </div>
 </template>
 

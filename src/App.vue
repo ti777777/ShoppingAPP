@@ -2,11 +2,11 @@
   <div id="app" >
     <div id="nav" class="px-3">
       <div class="center">
-        <router-link to="/">就是愛動漫</router-link> 
+        <router-link to="/">商店</router-link> 
       </div>
     </div>
     <div class="center">
-      <div class="aside bg-light">
+      <div class="aside bg-light mt-2">
         <div v-if="this.$router.currentRoute.name=='test'">
           1
         </div>
@@ -17,9 +17,6 @@
           <AsideBanner/>
           <AsideBanner/>
           <AsideBanner/>
-        </div>
-        <div>
-          <router-link to="/about">關於</router-link> 
         </div>
       </div>
       <div class="main">
@@ -130,7 +127,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   min-height:100vh;
   margin: 0 auto;
 }
@@ -138,8 +134,11 @@ export default {
 #nav{
   text-align: left;
   background-color:rgb(235, 191, 72);
+        
+  font-weight: 1000;
   height:40px;
   line-height: 40px;
+  box-shadow: 0px 5px 7px #888;
 }
 
 a{
@@ -148,7 +147,7 @@ a{
 
 #nav a {
   font-weight: bold;
-  color: #222;
+  color: black;
   
 }
 
@@ -162,6 +161,8 @@ a{
 .aside{
   width:180px;
   float:left;
+  border-radius: 3px;
+  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75)
 }
 .main{
   width:1110px;

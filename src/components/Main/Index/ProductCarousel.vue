@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-2 p-2 box-shadow bg-light" style="position:relative;">
+    <div class="text-left mt-2 p-2 bg-light" style="position:relative; box-shadow:0px 0px 5px 0px rgba(0,0,0,0.75);border-radius:3px;">
         <div class="carousel-title p-2 mb-2">
             {{carouselInfo.title}}
         </div>
@@ -55,14 +55,20 @@ export default {
 
 <style scoped>
     .carousel-title{
-        background-color: rgb(224, 176, 42);
+        line-height: 20px;
+        border:1px solid #999;
+        background-color: #aaa;
+        color: white;
+        text-shadow: -1px 0 #888, 0 1px #888,
+      1px 0 #888, 0 -1px #888;
+    }
+    .carousel-title::before{
+        content:"\00a0";
+        width: 10px;
+        background-color: cornflowerblue;
     }
     .item{
         border:1px solid;
         height:250px;
-    }
-    .box-shadow{
-        text-align: left;
-        box-shadow: 0px 2px 5px #999;
     }
 </style>

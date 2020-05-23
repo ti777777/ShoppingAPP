@@ -1,6 +1,6 @@
 <template>
-    <div class="menu mt-2 p-1 ">
-        <div class="menu-title">
+    <div class="menu  p-2 ">
+        <div class="menu-title text-left p-2">
             {{this.title}}
         </div>
         <div class="menu-body">
@@ -28,8 +28,17 @@ export default {
         border-radius:3px; 
     }
     .menu-title{
-        background-color:rgb(241, 184, 97); 
-        border-radius: 3px;
+        line-height: 20px;
+        border:1px solid #999;
+        background-color: #aaa;
+        color: white;
+        text-shadow: -1px 0 #888, 0 1px #888,
+      1px 0 #888, 0 -1px #888;
+    }
+    .menu-title::before{
+        content:"\00a0";
+        width: 10px;
+        background-color: cornflowerblue;
     }
     .menu-list{
         list-style: none;
@@ -39,8 +48,9 @@ export default {
         text-align: left;
     }
     .menu-item a{
-        text-decoration: underline;
-        color:black;
+        color:#444;
+        text-shadow: -1px 0 #eee, 0 1px #eee,
+      1px 0 #eee, 0 -1px #eee;
     }
     .box-shadow{
         box-shadow: 0px 2px 5px #999;
