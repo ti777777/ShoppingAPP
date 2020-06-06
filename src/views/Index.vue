@@ -3,22 +3,23 @@
         <SearchBar/>
         <Banner/>
         <ProductCarousel v-bind:carouselInfo="this.carousels.trettaCarousel"/>
-        <ProductCarousel v-bind:carouselInfo="this.carousels.trettaCarousel"/>
+        <ProductShowBox/>
         <Banner/>
         <ProductCarousel v-bind:carouselInfo="this.carousels.zhTwBook"/>
     </div>
 </template>
 <script>
-
+import ProductShowBox from '../components/Main/Index/ProductShowBox.vue'
 import Banner from '../components/Main/Index/Banner'
 import ProductCarousel from '../components/Main/Index/ProductCarousel'
 import SearchBar from '../components/Main/Utils/SearchBar.vue'
 
 export default {
     components:{
-        SearchBar,
         Banner,
-        ProductCarousel
+        ProductCarousel,
+        SearchBar,
+        ProductShowBox
     },
     data(){
         return {

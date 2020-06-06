@@ -22,9 +22,24 @@ const routes = [
     component:Test
   },
   {
-    path:'/product',
+    path:'/product/:id',
     name:'product',
     component:Product
+  },
+  {
+    path:'/login',
+    name:'login',
+    component:()=>import('../views/Login.vue')
+  },
+  {
+    path:'/category/:name',
+    name:'category',
+    component:()=>import('../views/Category.vue')
+
+  },
+  {
+    path:'*',
+    name:'404'
   }
 ]
 

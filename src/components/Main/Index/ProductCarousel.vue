@@ -1,30 +1,30 @@
 <template>
-    <div class="text-left mt-2 p-2 bg-light" style="position:relative; box-shadow:0px 0px 5px 0px rgba(0,0,0,0.75);border-radius:3px;">
-        <div class="carousel-title p-2 mb-2">
+    <div class="text-left mt-2 p-2 " style="position:relative;">
+        <div class="carousel-title p-2  pl-3 rounded-pill border mb-2">
             {{carouselInfo.title}}
         </div>
         <carousel :nav="false" :dots="false" :responsive="this.responsive" >
-           <ProductItem/>
-           <ProductItem/>
-           <ProductItem/>
-           <ProductItem/>
-           <ProductItem/>
-           <ProductItem/>
-           <ProductItem/>
-           <ProductItem/>
+            <FlexBox><product-box class="p-1" name="第一個商品" url="/product/213124124" img="https://placeimg.com/200/200/any?1" price="124421" /></FlexBox>
+            <FlexBox><product-box class="p-1"  name="第二個商品" url="/product/213124124" img="https://placeimg.com/200/200/any?1" price="124421" /></FlexBox>
+            <FlexBox><product-box class="p-1"  name="第三個商品" url="/product/213124124" img="https://placeimg.com/200/200/any?1" price="124421" /></FlexBox>
+            <FlexBox><product-box class="p-1"  name="第四個商品" url="/product/213124124" img="https://placeimg.com/200/200/any?1" price="124421" /></FlexBox>
+            <FlexBox><product-box class="p-1"  name="第一個商品" url="/product/213124124" img="https://placeimg.com/200/200/any?1" price="124421" /></FlexBox>
+            <FlexBox><product-box class="p-1"  name="第二個商品" url="/product/213124124" img="https://placeimg.com/200/200/any?1" price="124421" /></FlexBox>
+            <FlexBox><product-box class="p-1"  name="第三個商品" url="/product/213124124" img="https://placeimg.com/200/200/any?1" price="124421" /></FlexBox>
+            <FlexBox><product-box class="p-1"  name="第四個商品" url="/product/213124124" img="https://placeimg.com/200/200/any?1" price="124421" /></FlexBox>
             <!--<ProductItem v-for="item in items" :key="item" v-bind:item="item"  />-->
-            <template v-slot:prev><span class="prev" style="position:absolute; bottom:calc(50% - 30px); left:0; z-index:2; background:white; border:1px solid;">prev</span></template>
-            <template v-slot:next><span class="next" style="position:absolute; bottom:calc(50% - 30px); right:0; z-index:2; background:white; border:1px solid;">next</span></template>
+            <template v-slot:prev><span class="prev" style="padding:5px;position:absolute; bottom:calc(50% - 30px); left:0; z-index:2; background:white; border:1px solid;"><i class="fas fa-angle-double-left"></i></span></template>
+            <template v-slot:next><span class="next" style="padding:5px;position:absolute; bottom:calc(50% - 30px); right:0; z-index:2; background:white; border:1px solid;"><i class="fas fa-angle-double-right"></i></span></template>
         </carousel>
     </div>
 </template>
 
 <script>
 import carousel from 'vue-owl-carousel'
-import ProductItem from './ProductCarouselItem'
+import ProductBox from '../Utils/ProductBox'
 
 export default {
-    components: { carousel,ProductItem  },
+    components: { carousel,ProductBox  },
     props:[
         "carouselInfo"
     ],
@@ -54,19 +54,6 @@ export default {
 </script>
 
 <style scoped>
-    .carousel-title{
-        line-height: 20px;
-        border:1px solid #999;
-        background-color: #aaa;
-        color: white;
-        text-shadow: -1px 0 #888, 0 1px #888,
-      1px 0 #888, 0 -1px #888;
-    }
-    .carousel-title::before{
-        content:"\00a0";
-        width: 10px;
-        background-color: cornflowerblue;
-    }
     .item{
         border:1px solid;
         height:250px;
