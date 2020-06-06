@@ -1,13 +1,16 @@
 <template>
   <div id="app" >
-    <div id="nav" class="px-3">
+    <div id="nav" class="px-3 border-bottom">
       <div class="center">
-        <router-link to="/">商店</router-link> 
+        <span id="aside-menu" class="mr-3 fa fa-bars" @click="openAsideMenu"></span>
+        <router-link to="/">123123商店</router-link> 
+        <router-link class="float-right" to="/login"><i class="fa fa-user"></i>登入</router-link>
+        <router-link class="float-right mr-3" to="/login"><i class="fas fa-shopping-cart"></i>購物車</router-link>
       </div>
     </div>
-    <div class="center">
-      <div class="aside bg-light mt-2">
-        <div v-if="this.$router.currentRoute.name=='test'">
+    <div class="center clearfix">
+      <div class="aside mt-2">
+        <div v-if="this.$router.currentRoute.name==''">
           1
         </div>
         <div v-else >
@@ -23,6 +26,38 @@
         <router-view/>
       </div>
     </div>
+    <div class="footer">
+        <div class="container-fluid">
+          <div class="row p-3 border-top text-left">
+            <div class="col-sm-6 col-md-3">
+              <span class="p-3 h5">聯絡資訊</span>
+              <ul>
+                <li>line ti777777</li>
+                <li>fb edwfwefwe</li>
+                <li>ig ewiorhweoir</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              <span class="p-3 h5">服務項目</span>
+              <ul>
+                <li>程式設計</li>
+                <li>網站維護</li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-3">
+              
+            </div>
+            <div class="col-sm-6 col-md-3">
+              
+            </div>
+          </div>
+        </div>
+    </div>
+    <div id="aside-container" class="position-absolute clearfix p-5" >
+      <span class="fa fa-times float-right" @click="closeAsideMenu"></span>
+      <div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -33,6 +68,16 @@ export default {
   components:{
     AsideMenu,
     AsideBanner
+  },
+  methods:{
+    openAsideMenu(){
+      document.getElementById("aside-container").style.display="block";
+      document.getElementsByTagName("body")[0].style.overflowY="hidden";
+    },
+    closeAsideMenu(){
+      document.getElementById("aside-container").style.display="none";
+      document.getElementsByTagName("body")[0].style.overflowY="auto";
+    }
   },
   data(){
     return {
@@ -83,33 +128,6 @@ export default {
         },
         {
           title:'海報掛畫收藏'
-        },
-        {
-          title:'配件飾品類'
-        },
-        {
-          title:'絨毛類'
-        },
-        {
-          title:'絕版品'
-        },
-        {
-          title:'資料夾類'
-        },
-        {
-          title:'電影展覽票券'
-        },
-        {
-          title:'電器類'
-        },
-        {
-          title:'電影展覽票券'
-        },
-        {
-          title:'福袋禮包類'
-        },
-        {
-          title:'廚房用品類'
         }
       ]
       
@@ -132,13 +150,14 @@ export default {
 }
 
 #nav{
-  text-align: left;
-  background-color:rgb(235, 191, 72);
-        
+  text-align: left;   
   font-weight: 1000;
   height:40px;
   line-height: 40px;
-  box-shadow: 0px 5px 7px #888;
+}
+
+ul{
+  list-style: none;  
 }
 
 a{
@@ -150,9 +169,23 @@ a{
   color: black;
   
 }
+#nav div{
+  white-space: nowrap;
+}
 
 #nav a.router-link-exact-active {
     text-decoration: none;
+}
+#aside-menu{
+  display: none;
+}
+#aside-container{
+  top:0;
+  z-index:9999;
+  height:100vh;
+  width:100vw; 
+  background:white;
+  display:none;
 }
 .center{
   width:1300px;
@@ -161,8 +194,6 @@ a{
 .aside{
   width:180px;
   float:left;
-  border-radius: 3px;
-  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75)
 }
 .main{
   width:1110px;
@@ -189,6 +220,7 @@ a{
 	position:relative;
 	top:1px;
 }
+
 
 @media (max-width:1339px) {
     .center{
@@ -242,6 +274,9 @@ a{
     }
     .main{
       width:100%;
+    }
+    #aside-menu{
+      display: inline;
     }
 }
 @media (max-width: 600px){
