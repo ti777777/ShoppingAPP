@@ -28,7 +28,7 @@
     </div>
     <div class="footer">
         <div class="container-fluid">
-          <div class="row p-3 border-top text-left">
+          <div class="row p-3 mb-5 border-top text-left justify-content-center">
             <div class="col-sm-6 col-md-3">
               <span class="p-3 h5">聯絡資訊</span>
               <ul>
@@ -45,10 +45,11 @@
               </ul>
             </div>
             <div class="col-sm-6 col-md-3">
-              
-            </div>
-            <div class="col-sm-6 col-md-3">
-              
+              <span class="p-3 h5">服務項目</span>
+              <ul>
+                <li>程式設計</li>
+                <li>網站維護</li>
+              </ul>
             </div>
           </div>
         </div>
