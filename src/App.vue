@@ -56,8 +56,8 @@
     </div>
     <div id="aside-container" class="position-absolute clearfix p-5" >
       <span class="fa fa-times float-right" @click="closeAsideMenu"></span>
-      <div>
-      </div>
+          <AsideMenu title="近期" v-bind:menu="recentMenu"/>
+          <AsideMenu title="類別" v-bind:menu="categoryMenu"/>
     </div>
   </div>
 </template>
