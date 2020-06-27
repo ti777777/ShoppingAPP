@@ -28,36 +28,41 @@
     </div>
     <div class="footer">
         <div class="container-fluid">
-          <div class="row p-3 mb-5 border-top text-left justify-content-center">
+          <div class="row p-3 mb-5 border-top text-center justify-content-center">
+            <div class="col-sm-6 col-md-3">
+              <div class="p-3 mt-3">
+                <img src="../src/assets/logistic.jpg" height="60" alt="">
+                <img src="../src/assets/logo200x120.png">
+              </div>
+            </div>
             <div class="col-sm-6 col-md-3">
               <span class="p-3 h5">聯絡資訊</span>
-              <ul>
-                <li>line ti777777</li>
-                <li>fb edwfwefwe</li>
-                <li>ig ewiorhweoir</li>
-              </ul>
+              <div class="p-3 mt-3">
+                <img width="50" height="50" src="../src/assets/fb.png" alt="">
+                <img width="50" height="50" src="../src/assets/ig.png" alt="">
+              </div>
             </div>
             <div class="col-sm-6 col-md-3">
               <span class="p-3 h5">服務項目</span>
-              <ul>
-                <li>程式設計</li>
-                <li>網站維護</li>
-              </ul>
+              <div class="p-3 mt-3">
+                <ul class="p-0">
+                  <li>程式設計</li>
+                  <li>網站維護</li>
+                </ul>
+              </div>
             </div>
             <div class="col-sm-6 col-md-3">
-              <span class="p-3 h5">服務項目</span>
-              <ul>
-                <li>程式設計</li>
-                <li>網站維護</li>
-              </ul>
             </div>
           </div>
         </div>
     </div>
-    <div id="aside-container" class="position-absolute clearfix p-5" >
+    <div id="aside-container" class="position-absolute clearfix p-5 overflow-auto" >
       <span class="fa fa-times float-right" @click="closeAsideMenu"></span>
+      <div class="p-2">
           <AsideMenu title="近期" v-bind:menu="recentMenu"/>
           <AsideMenu title="類別" v-bind:menu="categoryMenu"/>
+
+      </div>
     </div>
   </div>
 </template>
