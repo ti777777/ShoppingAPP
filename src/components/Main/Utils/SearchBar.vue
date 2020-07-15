@@ -4,13 +4,6 @@
             <input id="search-input" type="text" name="" >
             <button id="search-button" class="t-button"><i class="fa fa-search"></i>搜尋</button>
         </div>
-        <div class="">
-            <ul>
-                <li><a href="#">123</a></li>
-                <li><a href="#">123</a></li>
-                <li><a href="#">123</a></li>
-            </ul>
-        </div>
     </div>
 </template>
 

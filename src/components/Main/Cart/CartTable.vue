@@ -24,13 +24,13 @@
             </div>
             <div class="d-md-table-row d-block border text-right" v-for="item in cartItems" v-bind:key="item.id"> 
                 <div class="d-md-table-cell d-block ">
-                    <span class="text-danger fa fa-times float-left p-3"></span>
+                    <span class="text-danger fa fa-times float-left p-3" @click="deleteItem(item.id)"></span>
                 </div>
                 <div class="d-md-table-cell d-block p-2">
                     <img src="https://placeimg.com/200/200/any?1" alt="">
                 </div>
                 <div class="d-md-table-cell d-block p-2">
-                    <span class="d-inline d-md-none float-left">品名</span>{{item.title}}
+                    <span class="d-inline d-md-none float-left">品名</span>{{item.name}}
                 </div>
                 <div class="d-md-table-cell d-block p-2">
                     <span class="d-inline d-md-none float-left">單價</span>{{item.price}}

@@ -10,15 +10,15 @@ export default new Vuex.Store({
       {
         id:"123456",
         img:"",
-        title:"第一件商品",
+        name:"第一件商品",
         price:50,
         amount:1,
         option:""
       },
       {
-        id:"123456",
+        id:"123216",
         img:"",
-        title:"第二件商品",
+        name:"第二件商品",
         price:87,
         amount:3,
         option:""
@@ -28,12 +28,13 @@ export default new Vuex.Store({
   mutations: {
     addCartItem(state,item){
       var index = state.cartItems.findIndex(function(i){return i.id==item.id});
+      item.amount=item.amount|"1";
       if(index==-1){
         state.cartItems.push(item);
       }
     },
     deleteCartItem(state,id){
-      state.cartItems.filter(function(item){
+      state.cartItems=state.cartItems.filter(function(item){
         return item.id!=id;
       })
     }
