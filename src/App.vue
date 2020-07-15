@@ -4,8 +4,8 @@
       <div class="center">
         <span id="aside-menu" class="mr-3 fa fa-bars" @click="openAsideMenu"></span>
         <router-link to="/">123123商店</router-link> 
-        <router-link class="float-right" to="/login"><i class="fa fa-user"></i>登入</router-link>
-        <router-link class="float-right mr-3" to="/login"><i class="fas fa-shopping-cart"></i>購物車</router-link>
+        <router-link class="float-right" to="/login"><i class="fa fa-user"></i><span class="d-none d-lg-inline">登入</span></router-link>
+        <router-link class="float-right mr-3" to="/cart"><i class="fas fa-shopping-cart"></i><span class="d-none d-lg-inline">購物車</span></router-link>
       </div>
     </div>
     <div class="center clearfix">

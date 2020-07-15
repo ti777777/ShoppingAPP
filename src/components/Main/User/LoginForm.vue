@@ -1,7 +1,7 @@
 <template>
-    <div class="border border-info text-left row">
-        <div class="col-md-6 my-5">
-            <div>
+    <div class=" text-left row">
+        <div class="col-lg-5 col-md-8 my-5">
+            <div class="box-shadow p-3">
                 <b-tabs content-class="mt-3">
                     <b-tab title="登入" active>
                         <form>
@@ -51,5 +51,7 @@ export default {
 }
 </script>
 <style scoped>
-
+    .box-shadow{
+        box-shadow: 0px 5px 8px #888;
+    }
 </style>
