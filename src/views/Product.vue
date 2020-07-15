@@ -1,7 +1,7 @@
 <template>
     <div >
         <SearchBar/>
-        <ProductDetail/>
+        <ProductDetail v-bind:id="this.$route.params.id" name="通往夏天的出口" catergory="輕小說" price="200" description="第一個商品"/>
                 
     </div>
 </template>

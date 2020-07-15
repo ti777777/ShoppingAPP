@@ -3,7 +3,7 @@
     <div id="nav" class="px-3 border-bottom">
       <div class="center">
         <span id="aside-menu" class="mr-3 fa fa-bars" @click="openAsideMenu"></span>
-        <router-link to="/">123123商店</router-link> 
+        <router-link to="/">菜頭的書櫃</router-link> 
         <router-link class="float-right" to="/login"><i class="fa fa-user"></i><span class="d-none d-lg-inline">登入</span></router-link>
         <router-link class="float-right mr-3" to="/cart"><i class="fas fa-shopping-cart"></i><span class="d-none d-lg-inline">購物車</span></router-link>
       </div>
@@ -16,10 +16,6 @@
         <div v-else >
           <AsideMenu title="近期" v-bind:menu="recentMenu"/>
           <AsideMenu title="類別" v-bind:menu="categoryMenu"/>
-          <AsideBanner/>
-          <AsideBanner/>
-          <AsideBanner/>
-          <AsideBanner/>
         </div>
       </div>
       <div class="main">
@@ -69,11 +65,11 @@
 
 <script>
 import AsideMenu from './components/Aside/AsideMenu'
-import AsideBanner from './components/Aside/AsideBanner'
+//import AsideBanner from './components/Aside/AsideBanner'
 export default {
   components:{
     AsideMenu,
-    AsideBanner
+    //AsideBanner
   },
   methods:{
     openAsideMenu(){
@@ -89,51 +85,18 @@ export default {
     return {
       recentMenu:[
         {
-          title:'tretta'
+          title:'輕小說'
         },
         {
-          title:'二手書'
+          title:'電腦書'
         }
       ],
       categoryMenu:[
         {
-          title:'抱枕'
+          title:'輕小說'
         },
         {
-          title:'3C用品類'
-        },
-        {
-          title:'DVD'
-        },
-        {
-          title:'公仔類'
-        },
-        {
-          title:'文具類'
-        },
-        {
-          title:'包袋類'
-        },
-        {
-          title:'卡夾類'
-        },
-        {
-          title:'生活用品類'
-        },
-        {
-          title:'服飾類'
-        },
-        {
-          title:'杯類'
-        },
-        {
-          title:'拼圖類'
-        },
-        {
-          title:'家飾品類'
-        },
-        {
-          title:'海報掛畫收藏'
+          title:'電腦書'
         }
       ]
       
