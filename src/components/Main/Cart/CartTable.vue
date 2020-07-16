@@ -27,7 +27,7 @@
                     <span class="text-danger fa fa-times float-left p-3" @click="deleteItem(item.id)"></span>
                 </div>
                 <div class="d-md-table-cell d-block p-2">
-                    <img src="https://placeimg.com/200/200/any?1" alt="">
+                    <img :src="item.img" alt="">
                 </div>
                 <div class="d-md-table-cell d-block p-2">
                     <span class="d-inline d-md-none float-left">品名</span>{{item.name}}
@@ -47,6 +47,7 @@
             </div>
         </div>
         
+        <div class="h5">總計{{this.total}}</div>
     </div>
     
         
@@ -56,6 +57,13 @@ export default {
     computed:{
         cartItems:function(){
             return this.$store.state.cartItems;
+        },
+        total:function(){
+            var t=0;
+            this.cartItems.forEach(element => {
+                t+=element.price*element.amount;
+            });
+            return t;
         }
     },
     methods:{
