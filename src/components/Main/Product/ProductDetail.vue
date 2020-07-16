@@ -2,7 +2,7 @@
     <div >
         <div class="p-2 text-left bg-light " >
             <div class=" p-3" style="display:inline-block; min-width:250px;">
-                <img v-bind:src="this.img">
+                <img  v-bind:src="this.img">
             </div>
             <div class="p-3 pt-5" style="display:inline-block; vertical-align:middle;min-height:450px;">
                 <p><pre>品名:    <span>{{this.name}}</span></pre></p>
@@ -81,5 +81,9 @@ export default {
         border:none;
         border-radius: 5px;
         outline: none;
+    }
+    img{
+        max-width:220px;
+        max-height:300px;
     }
 </style>
