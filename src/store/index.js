@@ -7,23 +7,14 @@ export default new Vuex.Store({
   state: {
     total:0,
     cartItems:[
-      {
-        id:"123456",
-        img:"",
-        name:"第一件商品",
-        price:50,
-        amount:1,
-        option:""
-      },
-      {
-        id:"123216",
-        img:"",
-        name:"第二件商品",
-        price:87,
-        amount:3,
-        option:""
-      }
-    ]
+    ],
+    currentOrder:{
+      consignee:"",
+      phone:"",
+      address:"",
+      payment:"",
+      logistic:""
+    }
   },
   mutations: {
     addCartItem(state,item){

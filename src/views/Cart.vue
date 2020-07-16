@@ -1,6 +1,5 @@
 <template>
-    <div class="text-right">
-        <div class="mt-5 h4 text-center"></div>
+    <div class="my-5 text-right clearfix">
         <div class="container-fluid">
             <div class="row text-center">
                 <div class="col-4">
@@ -18,32 +17,35 @@
             </div>
         </div>
         <CartTable id="cartTable"/>
-        
-        <div class="h5">總計{{this.total}}</div>
-        <button id="" @click="checkPayment()" class="rounded-pill px-3 mb-5">結帳</button>
-        <button id="" @click="checkout()" class="rounded-pill px-3 mb-5">確認</button>
-        <button id="" @click="sendOrder()" class="rounded-pill px-3 mb-5">送出訂單</button>
-        <div class="row">
-        </div>
+        <PaymentTable id="paymentTable"/>
+        <CheckoutTable id="checkoutTable"/>
+        <button id="undo-btn" class="mb-5 rounded-pill float-left">上一步</button>
+        <button id="cart-btn" @click="checkPayment()" class="mb-5 rounded-pill px-3 mb-5 float-right">結帳</button>
+        <button id="payment-btn" @click="checkout()" class="mb-5 rounded-pill px-3 mb-5 float-right">確認</button>
+        <button id="checkout-btn" @click="sendOrder()" class="mb-5 rounded-pill px-3 mb-5 float-right">送出訂單</button>
     </div>
 </template>
 <script>
 import CartTable from '../components/Main/Cart/CartTable.vue'
+import PaymentTable from '../components/Main/Cart/PaymentTable'
+import CheckoutTable from '../components/Main/Cart/Checkout'
 export default {
     computed:{
         cartItems:function(){
             return this.$store.state.cartItems;
         },
-        total:function(){
-            var t=0;
-            this.cartItems.forEach(element => {
-                t+=element.price*element.amount;
-            });
-            return t;
+        currentOrder:function(){
+            return this.$store.state.currentOrder;
         }
     },
     components:{
-        CartTable
+        CartTable,
+        PaymentTable,
+        CheckoutTable
+
+    },
+    mounted(){
+        this.checkCart();
     },
     methods:{
         cleanPage:function(){
@@ -51,11 +53,30 @@ export default {
             document.getElementById("step-payment").classList.remove("step-active");
             document.getElementById("step-checkout").classList.remove("step-active");
             document.getElementById("cartTable").classList.add("d-none");
+            document.getElementById("paymentTable").classList.add("d-none");
+            document.getElementById("checkoutTable").classList.add("d-none");
+            document.getElementById("undo-btn").classList.add("d-none");
+            document.getElementById("cart-btn").classList.add("d-none");
+            document.getElementById("payment-btn").classList.add("d-none");
+            document.getElementById("checkout-btn").classList.add("d-none");
+            
+        },
+        checkCart:function(){
+                
+            this.cleanPage();
+            document.getElementById("step-cart").classList.toggle("step-active");
+            document.getElementById("cart-btn").classList.toggle("d-none");
+            document.getElementById("cartTable").classList.toggle("d-none");
         },
         checkPayment:function(){
             if(this.cartItems.length!=0&&this.total!=0){
                 this.cleanPage();
                 document.getElementById("step-payment").classList.toggle("step-active");
+                document.getElementById("undo-btn").classList.toggle("d-none");
+                document.getElementById("payment-btn").classList.toggle("d-none");
+                document.getElementById("undo-btn").onclick=this.checkCart;
+                document.getElementById("paymentTable").classList.remove("d-none");
+
 
             }else{
                 alert("無法進行下一步");
@@ -63,8 +84,16 @@ export default {
             
         },
         checkout:function(){
+            if(this.currentOrder.payment!=""&&this.currentOrder.logistic!=""&&this.currentOrder.consignee!=""&&this.currentOrder.phone!=""&&this.currentOrder.address!=""){
                 this.cleanPage();
                 document.getElementById("step-checkout").classList.toggle("step-active");
+                document.getElementById("undo-btn").classList.toggle("d-none");
+                document.getElementById("checkout-btn").classList.toggle("d-none");
+                document.getElementById("undo-btn").onclick=this.checkPayment;
+                document.getElementById("checkoutTable").classList.remove("d-none");
+            }else{
+                alert("請輸入完全");
+            }
 
         },
         sendOrder:function(){

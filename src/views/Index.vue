@@ -2,7 +2,7 @@
     <div class="">
         <SearchBar/>
         <AlertBox type="alert-info" text="這個網站純屬demo用，所有商品皆無法真實進行購買。"/>
-        <AlertBox type="alert-danger" text="網頁關閉後，購物車資料將不會儲存。"/>
+        <AlertBox type="alert-danger" text="網頁關閉或重新整理(F5)，購物車資料將不會儲存。"/>
         <Banner/>
         <ProductCarousel v-bind:carouselInfo="this.carousels.trettaCarousel"/>
         <ProductShowBox/>

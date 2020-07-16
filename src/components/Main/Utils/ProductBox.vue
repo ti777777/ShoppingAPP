@@ -18,6 +18,8 @@ export default {
 }
 </script>
 <style scoped>
-    .product-box{
+    img{
+        width: 200px;
+        height:200px;
     }
 </style>
