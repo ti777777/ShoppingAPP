@@ -39,15 +39,13 @@
               </div>
             </div>
             <div class="col-sm-6 col-md-3">
-              <span class="p-3 h5">服務項目</span>
+              <span class="p-3 h5">購物須知</span>
               <div class="p-3 mt-3">
                 <ul class="p-0">
-                  <li>程式設計</li>
+                  <li>退換貨條款</li>
                   <li>網站維護</li>
                 </ul>
               </div>
-            </div>
-            <div class="col-sm-6 col-md-3">
             </div>
           </div>
         </div>
