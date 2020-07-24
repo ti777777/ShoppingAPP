@@ -1,8 +1,8 @@
 <template>
     <div class="container-fluid">
-        <div class="row justify-content-center text-left my-5">
-            <div class="col-md-6 col-lg-4">
-                <div class=" p-3 shadow rounded" style="height:100%;">
+        <div class="row justify-content-center text-left mt-3">
+            <div class="col-md-6 col-lg-4 my-3">
+                <div class=" p-3 shadow-sm rounded bg-light" style="height:100%;">
                     <h3>付款</h3> 
                     <div class="form-check">
                     <input class="form-check-input" type="radio" v-model="currentOrder.payment" name="payment"  id="exampleRadios1" value="線上刷卡" checked>
@@ -24,8 +24,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-                <div class=" p-3 shadow rounded" style="height:100%;">
+            <div class="col-md-6 col-lg-4 my-3">
+                <div class=" p-3 shadow-sm rounded bg-light" style="height:100%;">
                     <h3>配送</h3> 
                     <div v-if="currentOrder.payment=='超商貨到付款'" >
                         <div class="form-check">
@@ -57,8 +57,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-                <div class=" p-3 shadow rounded">
+            <div class="col-md-6 col-lg-4 my-3">
+                <div class=" p-3 shadow-sm rounded bg-light">
                     <h3>收件人資料</h3> 
                     <form>
                     <div class="form-row">

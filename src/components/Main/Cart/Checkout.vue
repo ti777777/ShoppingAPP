@@ -1,9 +1,9 @@
 <template>
     <div class="text-left">
         <div class="container-fluid">
-            <div class="row my-5">
+            <div class="row">
                 <div class="col-md-8">
-                    <div class="p-3 rounded shadow clearfix">
+                    <div class="p-3 rounded shadow clearfix my-3">
                         <div class="d-md-table"  style="width:100%;">
                             <div class="d-md-table-row " style="width:100%;" v-for="item in this.cartItems" v-bind:key="item.id">
                                 <div class="d-md-table-cell"><span>{{item.name}}</span></div>
@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="p-3 rounded shadow">
+                    <div class="p-3 rounded shadow my-3">
                     <h3>訂單細節</h3>
                     <pre>
 姓名 :     {{currentOrder.consignee}}

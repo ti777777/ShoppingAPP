@@ -1,6 +1,6 @@
 <template>
     <div >
-        <div class="p-2 text-left bg-light " >
+        <div class="p-2 text-left " >
             <div class=" p-3" style="display:inline-block; min-width:250px;">
                 <img  v-bind:src="this.img">
             </div>
@@ -64,6 +64,10 @@ export default {
         currentUrl:function(){
             return location.href;
         }
+    },
+    mounted(){
+        this.amount=1;
+        
     },
     methods:{
         addToCart(){
