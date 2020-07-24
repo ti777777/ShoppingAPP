@@ -22,4 +22,11 @@ export default {
         width: 200px;
         height:200px;
     }
+    
+    @media screen and (max-width : 600px) {
+        
+        img{
+            width: 150px;
+        }
+    }
 </style>

@@ -1,8 +1,7 @@
 <template>
-    <div >
+    <div class="mb-2">
         <SearchBar/>
         <ProductDetail v-bind:id="this.$route.params.id" :img="this.product.img" :name="this.product.name" :catergory="this.product.catergory" :price="this.product.price" :description="this.product.description"/>
-        {{product.id}}
     </div>
 </template>
 

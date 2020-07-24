@@ -1,6 +1,6 @@
 <template>
   <div id="app" >
-    <div id="nav" class="px-3 border-bottom">
+    <div id="nav" class="px-3 border-bottom bg-light shadow-sm" style="position:sticky; top:0; z-index:9999;">
       <div class="center">
         <span id="aside-menu" class="mr-3 fa fa-bars" @click="openAsideMenu"></span>
         <router-link to="/">菜頭的書櫃</router-link> 
@@ -50,7 +50,7 @@
           </div>
         </div>
     </div>
-    <div id="aside-container" class="position-absolute clearfix p-5 overflow-auto" >
+    <div id="aside-container" class="position-fixed clearfix p-5 overflow-auto" >
       <span class="fa fa-times float-right" @click="closeAsideMenu"></span>
       <div class="p-2">
           <AsideMenu title="近期" v-bind:menu="recentMenu"/>
@@ -106,7 +106,9 @@ export default {
 </script>
 
 <style>
-
+html{
+  background: rgb(245,245,245);
+}
 #app {
   font-family: 'Microsoft JhengHei','Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -114,6 +116,7 @@ export default {
   text-align: center;
   min-height:100vh;
   margin: 0 auto;
+  background: rgb(245,245,245);
 }
 
 #nav{
