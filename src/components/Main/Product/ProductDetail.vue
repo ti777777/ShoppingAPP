@@ -67,11 +67,10 @@ export default {
     },
     mounted(){
         this.amount=1;
-        
     },
     methods:{
         addToCart(){
-                this.$store.commit("addCartItem",{id:this.id,name:this.name,img:this.img,price:this.price,amount:this.amount});
+            this.$store.commit("addCartItem",{id:this.id,name:this.name,img:this.img,price:this.price,amount:this.amount});
         }
     }
 }
