@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="center clearfix">
-      <div class="aside mt-2">
+      <div class="aside mt-2 position-sticky" >
         <div v-if="this.$router.currentRoute.name==''">
           1
         </div>
@@ -164,6 +164,7 @@ a{
 .aside{
   width:180px;
   float:left;
+  top:50px;
 }
 .main{
   width:1110px;
