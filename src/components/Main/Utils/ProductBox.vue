@@ -48,9 +48,10 @@ export default {
         z-index: 1;
     }
     @media screen and (max-width : 600px) {
-        
         .img-box{
+            margin: 0 auto;
             width: 150px;
+            height:150px;
         }
     }
 </style>

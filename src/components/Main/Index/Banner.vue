@@ -9,4 +9,9 @@
         height: 400px;
         width:100%;
     }
+    @media screen and (max-width: 880px) {
+        img{
+            height:30vw;
+        }
+    }
 </style>
